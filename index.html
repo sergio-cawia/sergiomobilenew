@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Sergio Mobile</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="themes/my-custom-theme.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile.structure-1.4.3.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script> 
+<script>
+
+$.get( "http://ro.cawia.com:81/sergiomobile/data.php", { job: "header" }, function ( data ) { $( "#header" ).html( data ).trigger( "create" ); } );
+$.get( "http://ro.cawia.com:81/sergiomobile/data.php", { job: "main" }, function ( data ) { $( "#main" ).html( data ).trigger( "create" ); } );
+$.get( "http://ro.cawia.com:81/sergiomobile/data.php", { job: "footer" }, function ( data ) { $( "#footer" ).html( data ).trigger( "create" ); } );
+function replacemain()
+{
+	$.get( "http://ro.cawia.com:81/sergiomobile/data.php", { job: "replacemain" }, function ( data ) { $( "#main" ).append( data ).trigger( "create" ); } );
+}
+
+</script>
+
+</head>
+
+<body>
+<div data-role="page">
+	<div data-role="header" id="header">...</div>
+	<div role="main" class="ui-content" id="main">...</div>
+	<div data-role="footer" id="footer">...</div>
+</div>
+
+
+</body>
+</html>
