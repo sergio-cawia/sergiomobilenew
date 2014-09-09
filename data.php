@@ -20,7 +20,7 @@ if ( $_GET[ "job" ] == "replacemain" )
 
 if ( $_GET[ "job" ] == "footer" )
 {
-	print "<button onclick='replacemain()' data-theme='a'>Press me</button><br>This is the footer.";
+	print "<button onclick='replacemain()' data-theme='a'>Press me</button><br><button onclick='replacemain()' data-theme='a'>Clear</button>This is the footer.";
 	exit;	
 }
 
